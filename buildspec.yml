@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - printenv
+      - npm --only=production install
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - aws --region $AWS_REGION_NAME s3 cp $APP_CONFIG_S3_PATH config/config.json
+      - aws --region $AWS_REGION_NAME s3 cp $APP_COMMON_S3_PATH/batch.sh scripts/batch.sh
+      - aws --region $AWS_REGION_NAME s3 cp $APP_COMMON_S3_PATH/aws-metrics-system-info scripts/service_common/aws-metrics-system-info
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - appspec.yml
+    - package.json
+    - scripts/**/*
+    - src/**/*
+    - node_modules/**/*
+    - config/**/*
+    - pm2/**/*
+  discard-paths: no
+      

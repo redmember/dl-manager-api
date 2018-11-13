@@ -1,2 +1,1 @@
-# dl-verifier-api
-dl-verifier-api
+# chekt-service-alarm

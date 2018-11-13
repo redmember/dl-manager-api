@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/dlapi/
+hooks:
+  BeforeInstall:
+    - location: scripts/before-install.sh
+      timeout: 30
+      runas: root
+  ApplicationStart:
+    - location: scripts/application-start.sh
+      timeout: 30
+      runas: root
