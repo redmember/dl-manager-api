@@ -11,6 +11,7 @@ phases:
   build:
     commands:
       - aws --region $AWS_REGION_NAME s3 cp $APP_CONFIG_S3_PATH config/config.json
+      - aws --region $AWS_REGION_NAME s3 cp $APP_LOG_S3_PATH scripts/awslogs/awslogs.conf
       - aws --region $AWS_REGION_NAME s3 cp $APP_COMMON_S3_PATH/batch.sh scripts/batch.sh
       - aws --region $AWS_REGION_NAME s3 cp $APP_COMMON_S3_PATH/aws-metrics-system-info scripts/service_common/aws-metrics-system-info
   post_build:

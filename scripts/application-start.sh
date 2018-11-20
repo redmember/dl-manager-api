@@ -20,7 +20,6 @@ dir_cleanup() {
 }
 
 batch_exec() {
-  export AWSLOGS_GROUP_NAME
   local batch_file_path="${script_path}/batch.sh"
 
   [ ! -f "${batch_file_path}" ] && return

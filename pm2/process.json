@@ -1,7 +1,7 @@
 {
   "apps": [{
-    "name": "dlapi",
-    "cwd": "/var/dlapi/src",
+    "name": "manager",
+    "cwd": "/var/manager/src",
     "script": "app.js",
     "watch": false,
     "restart_delay": 1000,
@@ -11,8 +11,8 @@
     "instances": 1,
     "exec_mode": "cluster",
     "log_date_format": "YYYY-MM-DD HH:mm:SSZ",
-    "out_file": "/var/log/dlapi/pm2out.log",
-    "error_file": "/var/log/dlapi/pm2error.log",
+    "out_file": "/var/log/manager/pm2out.log",
+    "error_file": "/var/log/manager/pm2error.log",
     "env": {
       "NODE_ENV": "production"
     },
