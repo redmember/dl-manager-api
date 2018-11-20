@@ -21,7 +21,7 @@ app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }));
 
 if (process.env.NODE_ENV === 'development') {
-  app.use('/doc/', express.static(path.join(__dirname, '../doc/html')));
+  app.use('/doc/', express.static(path.join(__dirname, '../docs')));
 }
 
 app.use('/', routes);

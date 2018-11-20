@@ -15,7 +15,7 @@ const config = {
     config: 'docs/config',
     src: 'src/controllers',
     template: 'docs/template/send_sample_request.js',
-    dst: 'docs/html/manager'
+    dst: 'docs/manager'
   }
 };
 
