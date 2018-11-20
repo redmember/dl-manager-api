@@ -22,7 +22,7 @@ const config = {
     config: 'docs/config/git',
     src: 'src/controllers',
     template: 'docs/template/send_sample_request.js',
-    dst: 'docs/manager'
+    dst: '../dl-docs/docs/manager'
   }
 };
 
