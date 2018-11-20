@@ -4,9 +4,7 @@ wiki
 **/*.swo
 **/*.log
 config/*.json
-docs/manager/api_project.json
-docs/manager/api_project.js
-test/test.json
+docs/manager/
 node_modules/
 mtest/
 package-lock.json
