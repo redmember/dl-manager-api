@@ -1,0 +1,12 @@
+wiki
+**/.vscode
+**/*.swp
+**/*.swo
+**/*.log
+doc/html/
+doc/template/*.js
+config/*.json
+test/test.json
+node_modules/
+mtest/
+package-lock.json

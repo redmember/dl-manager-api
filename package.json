@@ -1,0 +1,37 @@
+{
+  "name": "dlapi",
+  "version": "1.0.0-rc.0",
+  "description": "DL API",
+  "main": "app.js",
+  "scripts": {
+    "start": "gulp serve:watch",
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DL",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "^2.344.0",
+    "body-parser": "^1.18.3",
+    "mysql": "^2.16.0",
+    "express": "^4.16.4",
+    "express-async-errors": "^2.1.2",
+    "express-winston": "^2.6.0",
+    "fs-extra": "^5.0.0",
+    "http-errors": "^1.7.1",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.2",
+    "multiparty": "^4.2.1",
+    "redis": "^2.8.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "uuid": "^3.3.2",
+    "winston": "^2.4.4"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-apidoc": "^0.2.8",
+    "gulp-live-server": "0.0.31"
+  }
+}

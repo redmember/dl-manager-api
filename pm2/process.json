@@ -1,0 +1,26 @@
+{
+  "apps": [{
+    "name": "dlapi",
+    "cwd": "/var/dlapi/src",
+    "script": "app.js",
+    "watch": false,
+    "restart_delay": 1000,
+    "max_restarts": 1000000,
+    "retain": 2,
+    "merge-logs": true,
+    "instances": 1,
+    "exec_mode": "cluster",
+    "log_date_format": "YYYY-MM-DD HH:mm:SSZ",
+    "out_file": "/var/log/dlapi/pm2out.log",
+    "error_file": "/var/log/dlapi/pm2error.log",
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "env_production": {
+      "NODE_ENV": "production"
+    },
+    "env_staging": {
+      "NODE_ENV" : "staging"
+    }
+  }]
+}
