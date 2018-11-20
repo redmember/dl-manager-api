@@ -12,10 +12,10 @@ const config = {
   },
   doc: {
     opt: { cwd: '', igonreErrors: false },
-    config: 'doc/config',
+    config: 'docs/config',
     src: 'src/controllers',
-    template: 'doc/template/send_sample_request.js',
-    dst: 'doc/html/manager'
+    template: 'docs/template/send_sample_request.js',
+    dst: 'docs/html/manager'
   }
 };
 
