@@ -3,7 +3,6 @@ wiki
 **/*.swp
 **/*.swo
 **/*.log
-docs/manager/
 config/*.json
 test/test.json
 node_modules/
