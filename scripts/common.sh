@@ -1,17 +1,16 @@
 #!/bin/bash
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
-APP_DIR="/var/dlapi"
+APP_NAME="manager"
+APP_DIR="/var/${APP_NAME}"
 # shellcheck disable=SC2034
 PM2_CONF_PATH="${APP_DIR}/pm2/process.json"
 # shellcheck disable=SC2034
-LOG_DIR="/var/log/dlapi"
+LOG_DIR="/var/log/${APP_NAME}"
 APP_CONF_DIR="${APP_DIR}/config"
 APP_CONF_PATH="${APP_CONF_DIR}/config.json"
 # shellcheck disable=SC2034
-APP_NAME="DL API"
 # shellcheck disable=SC2034
-AWSLOGS_GROUP_NAME="/chekt/dlapi"
 SYSLOG_PREFIX="[CHEKT]"
 
 eval "$(wget -q -O - http://169.254.169.254/latest/user-data)"

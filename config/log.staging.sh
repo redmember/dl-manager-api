@@ -2,14 +2,14 @@
 
 env="staging"
 region="ap-northeast-2"
-bucket_path="s3://config.chektdev.com/dl/manager/config.json"
+bucket_path="s3://config.chektdev.com/dl/log/awslogs.conf"
 
 get_config() {
-	aws --region ${region} s3 cp ${bucket_path} ./config.${env}.json
+	aws --region ${region} s3 cp ${bucket_path} ./log.${env}.conf
 }
 
 set_config() {
-	aws --region ${region} s3 cp ./config.${env}.json ${bucket_path}
+	aws --region ${region} s3 cp ./log.${env}.conf ${bucket_path}
 }
 
 case $1 in

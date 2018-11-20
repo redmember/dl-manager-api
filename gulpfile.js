@@ -10,36 +10,25 @@ const config = {
     cfg: 'src/config/*.json',
     app: ['src/app.js']
   },
-  doc: [
-    {
-      opt: { cwd: '', igonreErrors: false },
-      config: 'doc/config',
-      src: 'src/controllers',
-      template: 'doc/template/send_sample_request.js',
-      dst: 'doc/html/manager'
-    },
-    {
-      opt: { cwd: '', igonreErrors: false },
-      config: 'doc/config',
-      src: 'src/receiver',
-      template: 'doc/template/send_sample_request.js',
-      dst: 'doc/html/receiver'
-    }
-  ]
+  doc: {
+    opt: { cwd: '', igonreErrors: false },
+    config: 'doc/config',
+    src: 'src/controllers',
+    template: 'doc/template/send_sample_request.js',
+    dst: 'doc/html/manager'
+  }
 };
 
 const complete = () => {};
 
 gulp.task('doc:dev:compile', (done) => {
-  for (let i = 0; i < config.doc.length; i++) {
-    const options = {
-      src: config.doc[i].src,
-      dest: config.doc[i].dst,
-      config: config.doc[i].config
-    };
-    apidoc(options, complete);
-    gulp.src(config.doc[i].template).pipe(gulp.dest(config.doc[i].dst + '/utils', { overwrite: true }));
-  }
+  const options = {
+    src: config.doc.src,
+    dest: config.doc.dst,
+    config: config.doc.config
+  };
+  apidoc(options, complete);
+  gulp.src(config.doc.template).pipe(gulp.dest(config.doc.dst + '/utils', { overwrite: true }));
   done();
 });
 

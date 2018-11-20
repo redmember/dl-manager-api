@@ -1,7 +1,7 @@
 {
-  "name": "dlapi",
+  "name": "manager",
   "version": "1.0.0-rc.0",
-  "description": "DL API",
+  "description": "DL Manager",
   "main": "app.js",
   "scripts": {
     "start": "gulp serve:watch",
@@ -22,7 +22,6 @@
     "http-errors": "^1.7.1",
     "jsonwebtoken": "^8.3.0",
     "moment": "^2.22.2",
-    "multiparty": "^4.2.1",
     "redis": "^2.8.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
