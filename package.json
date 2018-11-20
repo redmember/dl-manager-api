@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "gulp serve:watch",
+    "gitdoc": "gulp gitdoc",
     "lint": "eslint ./ --ignore-path .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -10,9 +10,16 @@ const config = {
     cfg: 'src/config/*.json',
     app: ['src/app.js']
   },
-  doc: {
+  localdoc: {
     opt: { cwd: '', igonreErrors: false },
-    config: 'docs/config',
+    config: 'docs/config/local',
+    src: 'src/controllers',
+    template: 'docs/template/send_sample_request.js',
+    dst: 'docs/manager'
+  },
+  gitdoc: {
+    opt: { cwd: '', igonreErrors: false },
+    config: 'docs/config/git',
     src: 'src/controllers',
     template: 'docs/template/send_sample_request.js',
     dst: 'docs/manager'
@@ -23,12 +30,23 @@ const complete = () => {};
 
 gulp.task('doc:dev:compile', (done) => {
   const options = {
-    src: config.doc.src,
-    dest: config.doc.dst,
-    config: config.doc.config
+    src: config.localdoc.src,
+    dest: config.localdoc.dst,
+    config: config.localdoc.config
   };
   apidoc(options, complete);
-  gulp.src(config.doc.template).pipe(gulp.dest(config.doc.dst + '/utils', { overwrite: true }));
+  gulp.src(config.localdoc.template).pipe(gulp.dest(config.localdoc.dst + '/utils', { overwrite: true }));
+  done();
+});
+
+gulp.task('gitdoc:dev:compile', (done) => {
+  const options = {
+    src: config.gitdoc.src,
+    dest: config.gitdoc.dst,
+    config: config.gitdoc.config
+  };
+  apidoc(options, complete);
+  gulp.src(config.gitdoc.template).pipe(gulp.dest(config.gitdoc.dst + '/utils', { overwrite: true }));
   done();
 });
 
@@ -43,6 +61,7 @@ gulp.task('server:dev', () => {
   gulp.watch([config.server.js], gulp.series(['doc:dev:compile'], (done) => { done(); }));
 });
 
+gulp.task('gitdoc', gulp.series(['gitdoc:dev:compile']));
 gulp.task('serve:watch', gulp.series(['doc:dev:compile', 'server:dev']));
 gulp.task('serve:dev', gulp.series(['server:dev']));
 gulp.task('default', gulp.series(['serve:watch']));
