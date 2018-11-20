@@ -4,6 +4,8 @@ wiki
 **/*.swo
 **/*.log
 config/*.json
+docs/manager/api_project.json
+docs/manager/api_project.js
 test/test.json
 node_modules/
 mtest/

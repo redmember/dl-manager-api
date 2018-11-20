@@ -28,7 +28,7 @@
     "groupTitle": "Event",
     "sampleRequest": [
       {
-        "url": "https://leedosung.github.io/dl-manager-api//v1/dl/dealers/:dealer_id/events"
+        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/events"
       }
     ],
     "header": {
@@ -105,7 +105,7 @@
     "groupTitle": "Event",
     "sampleRequest": [
       {
-        "url": "https://leedosung.github.io/dl-manager-api//v1/dl/dealers/:dealer_id/sites/:site_id/events"
+        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/sites/:site_id/events"
       }
     ],
     "header": {
@@ -191,7 +191,7 @@
     "groupTitle": "Member",
     "sampleRequest": [
       {
-        "url": "https://leedosung.github.io/dl-manager-api//v1/dl/dealers/:dealer_id/members"
+        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/members"
       }
     ],
     "error": {
@@ -245,7 +245,7 @@
     "groupTitle": "Member",
     "sampleRequest": [
       {
-        "url": "https://leedosung.github.io/dl-manager-api//v1/dl/dealers/:dealer_id/members/:member_id"
+        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/members/:member_id"
       }
     ],
     "header": {
@@ -310,7 +310,7 @@
     "groupTitle": "Member",
     "sampleRequest": [
       {
-        "url": "https://leedosung.github.io/dl-manager-api//v1/dl/dealers/:dealer_id/members"
+        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/members"
       }
     ],
     "header": {
@@ -380,7 +380,7 @@
     "groupTitle": "Site",
     "sampleRequest": [
       {
-        "url": "https://leedosung.github.io/dl-manager-api//v1/dl/dealers/:dealer_id/sites"
+        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/sites"
       }
     ],
     "header": {
@@ -468,7 +468,7 @@
     "groupTitle": "Site",
     "sampleRequest": [
       {
-        "url": "https://leedosung.github.io/dl-manager-api//v1/dl/dealers/:dealer_id/sites/:site_id"
+        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/sites/:site_id"
       }
     ],
     "header": {
