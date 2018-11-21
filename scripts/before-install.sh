@@ -14,7 +14,7 @@ source "${common_filename}"
 
 message "before-install start ${config_filename}"
 
-slack_message "${APP_NAME} Service Deploy Starting" "${config_filename}"
+slack_message "Service Deploy Starting" "${config_filename}"
 
 pm2 stop "${PM2_CONF_PATH}"
 

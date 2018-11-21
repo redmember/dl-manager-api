@@ -35,7 +35,7 @@ pm2 save
 
 message "application-start end"
 
-slack_message "${APP_NAME} Service Deploy Completed"
+slack_message "Service Deploy Completed"
 
 batch_exec
 
