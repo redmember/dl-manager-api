@@ -10,10 +10,10 @@ phases:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - aws --region $AWS_REGION_NAME s3 cp $APP_CONFIG_S3_PATH config/config.json
-      - aws --region $AWS_REGION_NAME s3 cp $APP_LOG_S3_PATH scripts/awslogs/awslogs.conf
-      - aws --region $AWS_REGION_NAME s3 cp $APP_COMMON_S3_PATH/batch.sh scripts/batch.sh
-      - aws --region $AWS_REGION_NAME s3 cp $APP_COMMON_S3_PATH/aws-metrics-system-info scripts/service_common/aws-metrics-system-info
+      - aws --region $AWS_REGION s3 cp $APP_CONFIG_S3_PATH config/config.json
+      - aws --region $AWS_REGION s3 cp $APP_LOG_S3_PATH scripts/awslogs/awslogs.conf
+      - aws --region $AWS_REGION s3 cp $APP_COMMON_S3_PATH/batch.sh scripts/batch.sh
+      - aws --region $AWS_REGION s3 cp $APP_COMMON_S3_PATH/aws-metrics-system-info-v2 scripts/service_common/aws-metrics-system-info
   post_build:
     commands:
       - echo Build completed on `date`
