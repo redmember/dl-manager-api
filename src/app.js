@@ -5,6 +5,7 @@ const express = require('express');
 require('express-async-errors');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 const routes = require('./routes/index');
 const config = require('./common/config');
@@ -17,6 +18,10 @@ app.use(accessLogger());
 app.set('trust proxy', true);
 app.disable('x-powered-by');
 app.disable('etag');
+
+app.use(cors(config.cors));
+app.options('*', cors());
+
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }));
 

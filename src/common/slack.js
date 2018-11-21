@@ -11,7 +11,7 @@ const noti = (name, cb) => {
   }
 
   const payload = {
-    text: 'Alarm ' + name + ' Service Started',
+    text: name + ' Service Started',
     color: '#FF8000',
     ts: parseInt(Date.now() / 1000),
     fields: [
